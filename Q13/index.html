@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb On/Off</title>
+</head>
+
+<body align="center" style="background-color:black; color:white;">
+
+<h2>JavaScript Bulb</h2>
+
+<img id="bulb" src="pic_bulboff.gif" width="100"><br><br>
+
+<button onclick="turnOn()">Turn On</button>
+<button onclick="turnOff()">Turn Off</button>
+
+<script>
+function turnOn(){
+    document.getElementById("bulb").src = "pic_bulbon.gif";
+}
+
+function turnOff(){
+    document.getElementById("bulb").src = "pic_bulboff.gif";
+}
+</script>
+
+</body>
+</html>

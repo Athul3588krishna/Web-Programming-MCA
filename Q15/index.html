@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration</title>
+</head>
+
+<body>
+
+<h1>Student Registration Form</h1>
+
+<form onsubmit="return validateForm()">
+
+<table border="1" cellpadding="8">
+
+<tr>
+    <th>First Name</th>
+    <td>
+        <input type="text" id="fname" name="fname"
+        oninput="this.value=this.value.replace(/[^A-Za-z]/g,'')">
+    </td>
+</tr>
+
+<tr>
+    <th>Last Name</th>
+    <td>
+        <input type="text" id="lname" name="lname"
+        oninput="this.value=this.value.replace(/[^A-Za-z]/g,'')">
+    </td>
+</tr>
+
+<tr>
+    <th>Email ID</th>
+    <td>
+        <input type="email" id="email" name="email">
+    </td>
+</tr>
+
+<tr>
+    <th>Date of Birth</th>
+    <td>
+        <input type="date" name="dob">
+    </td>
+</tr>
+
+<tr>
+    <th>Mobile Number</th>
+    <td>
+        <input type="text" id="mobile" name="mobile" maxlength="10"
+        placeholder="Enter phone number"
+        oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+    </td>
+</tr>
+
+<tr>
+    <th>Gender</th>
+    <td>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+    </td>
+</tr>
+
+<tr>
+    <th>Address</th>
+    <td>
+        <textarea rows="2" name="address" placeholder="Enter address"></textarea>
+    </td>
+</tr>
+
+<tr>
+    <th>City</th>
+    <td>
+        <input type="text" name="city"
+        oninput="this.value=this.value.replace(/[^A-Za-z ]/g,'')">
+    </td>
+</tr>
+
+<tr>
+    <th>Pin Code</th>
+    <td>
+        <input type="text" name="pincode" maxlength="6"
+        oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2" align="center">
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+    </td>
+</tr>
+
+</table>
+</form>
+
+<script>
+function validateForm() {
+
+    var fname = document.getElementById("fname").value.trim();
+    var lname = document.getElementById("lname").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var mobile = document.getElementById("mobile").value.trim();
+
+    if (fname == "") {
+        alert("Please enter First Name");
+        return false;
+    }
+
+    if (lname == "") {
+        alert("Please enter Last Name");
+        return false;
+    }
+
+    if (email == "") {
+        alert("Please enter Email");
+        return false;
+    }
+
+    if (!email.includes("@") || !email.includes(".")) {
+        alert("Please enter valid Email");
+        return false;
+    }
+
+    if (mobile == "") {
+        alert("Please enter Mobile Number");
+        return false;
+    }
+
+    if (mobile.length != 10) {
+        alert("Mobile number must be 10 digits");
+        return false;
+    }
+
+    alert("Form submitted successfully ✅");
+    return true;
+}
+</script>
+
+</body>
+</html>

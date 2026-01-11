@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration</title>
+</head>
+
+<body>
+
+<h1>Student Registration Form</h1>
+
+<form>
+<table border="1" cellpadding="8">
+
+<tr>
+    <th>First Name</th>
+    <td><input type="text" name="fname"></td>
+</tr>
+
+<tr>
+    <th>Last Name</th>
+    <td><input type="text" name="lname"></td>
+</tr>
+
+<tr>
+    <th>Email ID</th>
+    <td><input type="email" name="email"></td>
+</tr>
+
+<tr>
+    <th>Date of Birth</th>
+    <td><input type="date" name="dob"></td>
+</tr>
+
+<tr>
+    <th>Mobile Number</th>
+    <td>
+        <input type="tel" name="mobile" maxlength="10" placeholder="Enter phone number">
+    </td>
+</tr>
+
+<tr>
+    <th>Gender</th>
+    <td>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+    </td>
+</tr>
+
+<tr>
+    <th>Address</th>
+    <td>
+        <textarea rows="2" name="address" placeholder="Enter address"></textarea>
+    </td>
+</tr>
+
+<tr>
+    <th>City</th>
+    <td><input type="text" name="city" maxlength="30" placeholder="Town ABC"></td>
+</tr>
+
+<tr>
+    <th>Pin Code</th>
+    <td><input type="text" name="pincode" maxlength="6"></td>
+</tr>
+
+<tr>
+    <th>Qualification</th>
+    <td>
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>SL No</th>
+                <th>Examination</th>
+                <th>Percentage</th>
+                <th>Year of Passing</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Class X</td>
+                <td><input type="number" name="percent"></td>
+                <td><input type="number" name="year"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type=""
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2" align="center">
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+    </td>
+</tr>
+
+</table>
+</form>
+
+</body>
+</html>
