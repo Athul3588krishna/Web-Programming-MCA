@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Frames Example</title>
 
     <style>
-        iframe[name="leftFrame"]{
-        height: 100vh;
-        width:25%;
-        border:none;
-
+        body{
+            margin:0;
         }
+
+        iframe[name="leftFrame"]{
+            height:100vh;
+            width:25%;
+            border:none;
+            float:left;
+        }
+
         iframe[name="rightFrame"]{
             height:100vh;
             width:75%;
-            
-
+            border:none;
+            float:left;
         }
     </style>
 </head>
 <body>
-    
+
 <iframe src="menu.html" name="leftFrame"></iframe>
 <iframe src="fruits.html" name="rightFrame"></iframe>
-
-
 
 </body>
 </html>
