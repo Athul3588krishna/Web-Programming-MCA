@@ -60,6 +60,7 @@ echo "<table border='1' cellpadding='8'>
         <tr>
             <th>Emp ID</th>
             <th>Name</th>
+            
             <th>Designation</th>
             <th>Salary</th>
         </tr>";
